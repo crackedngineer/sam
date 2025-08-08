@@ -1,0 +1,8 @@
+{
+    "name": "home",
+    "title": "Home",
+    "version": "1.0.0",
+    "description": "This is welcome app, a sample application.",
+    "author": "crackedngineer",
+    "license": "MIT"
+}

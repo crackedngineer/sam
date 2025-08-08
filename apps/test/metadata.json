@@ -1,0 +1,10 @@
+{
+    "name": "test",
+    "title": "Test App",
+    "version": "1.0.0",
+    "description": "This is app1, a sample application.",
+    "author": "crackedngineer",
+    "license": "MIT",
+    "src": "src/app.py",
+    "icon": ":material/account_circle:"
+}
