@@ -1,17 +1,11 @@
 import os
-import json
 import importlib.util
 from pathlib import Path
 import streamlit as st
 
 from constants import APP_DIR, DEFAULT_APP, APP_DIR_NAME
 from utils import install_requirements
-
-def read_json(file_path):
-    """Read a JSON file and return its content."""
-    with open(file_path, "r") as file:
-        return json.load(file)
-
+from helpers import read_json
 
 def main():
     # Get page from query param
