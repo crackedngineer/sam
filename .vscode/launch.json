@@ -2,19 +2,11 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Python Debugger: FastAPI",
-      "type": "debugpy",
-      "request": "launch",
-      "module": "uvicorn",
-      "args": ["src.api.app:app", "--reload"],
-      "jinja": true
-    },
-    {
       "name": "Python Debugger: Streamlit",
       "type": "debugpy",
       "request": "launch",
       "module": "streamlit",
-      "args": ["run", "src/streamlit_app/app.py"]
+      "args": ["run", "src/streamlit_app.py"]
     }
   ]
 }
