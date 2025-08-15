@@ -1,0 +1,39 @@
+name: Deploy to Cloudflare Pages
+
+on:
+  push:
+    branches:
+      - main  # or your production branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+    
+    defaults:
+      run:
+        working-directory: web
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Next.js for Cloudflare Pages
+        run: npx @cloudflare/next-on-pages
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          command: pages deploy .vercel/output/static --project-name=<your-project>
