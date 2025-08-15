@@ -1,0 +1,30 @@
+[server]
+# Bind to all interfaces for container/cloud deploy
+headless = true
+# port = 8501
+enableCORS = false
+enableXsrfProtection = true
+maxUploadSize = 200
+runOnSave = true
+
+[theme]
+primaryColor = "#4B9CD3"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F5F5F5"
+textColor = "#262730"
+font = "sans serif"
+
+[browser]
+gatherUsageStats = false
+
+[logger]
+level = "info"
+messageFormat = "%(asctime)s %(levelname)s: %(message)s"
+
+[runner]
+fastReruns = true
+magicEnabled = true
+
+[client]
+toolbarMode = "minimal"
+showErrorDetails = true
