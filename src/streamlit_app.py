@@ -4,7 +4,6 @@ from pathlib import Path
 import streamlit as st
 
 from constants import APP_DIR, DEFAULT_APP, APP_DIR_NAME
-from utils import install_requirements
 from helpers import read_json
 
 def main():
@@ -36,10 +35,6 @@ def main():
         )
 
     name = app_metadata.get("name", "untitled")
-
-    # Install requirements if needed
-    requirements_file = os.path.join(app_path, "requirements.txt")
-    install_requirements(requirements_file)
 
     # Initialize the app with metadata
     module_name = f"{APP_DIR_NAME}.{name}"
