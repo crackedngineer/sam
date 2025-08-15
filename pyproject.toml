@@ -1,5 +1,5 @@
 [project]
-name = "streamlit-app-manager"
+name = "ilovemystreamlit"
 version = "0.1.0"
 description = ""
 authors = [
@@ -14,6 +14,8 @@ dependencies = [
     "uvicorn (>=0.35.0,<0.36.0)"
 ]
 
+[tool.poetry]
+package-mode = false
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
