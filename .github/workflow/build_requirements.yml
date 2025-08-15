@@ -1,0 +1,53 @@
+name: Build and Merge Requirements
+
+on:
+  schedule:
+    - cron: "0 0,12 * * *" # Runs twice a day (midnight & noon UTC)
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  merge-requirements:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Poetry
+        run: pip install poetry
+
+      - name: Cache pip dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt', '**/pyproject.toml') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Run dependency merge script
+        run: |
+          chmod +x scripts/merge_requirements.sh
+          ./scripts/merge_requirements.sh
+
+      - name: Commit updated requirements.txt
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add src/requirements.txt
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update merged requirements.txt"
+            git push
+          fi
