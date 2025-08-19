@@ -23,7 +23,7 @@ importlib_metadata==8.7.0
 installer==0.7.0
 jaraco.classes==3.4.0
 jaraco.context==6.0.1
-jaraco.functools==4.2.1
+jaraco.functools==4.3.0
 jeepney==0.9.0
 jsonpatch==1.33
 jsonpointer==3.0.0
@@ -36,7 +36,7 @@ more-itertools==10.7.0
 msgpack==1.1.1
 orjson==3.11.2
 packaging==25.0
-pbs-installer==2025.8.14
+pbs-installer==2025.8.18
 pkginfo==1.12.1.2
 platformdirs==4.3.8
 poetry==2.1.4
@@ -47,7 +47,7 @@ pydantic_core==2.33.2
 pyproject_hooks==1.2.0
 PyYAML==6.0.2
 RapidFuzz==3.13.0
-requests==2.32.4
+requests==2.32.5
 requests-toolbelt==1.0.0
 SecretStorage==3.3.3
 shellingham==1.5.4
