@@ -1,0 +1,3 @@
+digipin-python>=0.1.7
+geopy>=2.4.1
+pandas

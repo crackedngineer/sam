@@ -1,0 +1,9 @@
+{
+    "name": "digipin-pro",
+    "title": "Digipin Pro App",
+    "version": "0.0.1",
+    "description": "This is app1, a sample application.",
+    "author": "crackedngineer",
+    "license": "MIT",
+    "icon": ":material/account_circle:"
+}
