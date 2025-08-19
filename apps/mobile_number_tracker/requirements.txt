@@ -1,4 +1,4 @@
 phonenumbers
-geopy
 folium 
 streamlit-folium
+opencage

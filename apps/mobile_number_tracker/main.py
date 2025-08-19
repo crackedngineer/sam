@@ -2,7 +2,6 @@ import os
 import streamlit as st
 import phonenumbers
 from phonenumbers import geocoder, carrier, timezone
-from geopy.geocoders import Nominatim
 import folium
 from streamlit_folium import st_folium
 from opencage.geocoder import OpenCageGeocode
