@@ -1,0 +1,40 @@
+name: Hourly Job
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # Runs at the start of every hour
+  workflow_dispatch:     # Allows manual triggering from GitHub UI
+
+permissions:
+  contents: write
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install pipreqs
+        run: |
+          pip install pipreqs
+
+      - name: Generate requirements.txt
+        working-directory: scripts
+        run: |
+          pipreqs . --force
+
+      - name: Install dependencies
+        working-directory: scripts
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run streamlit_wakeup.py
+        working-directory: scripts
+        run: python streamlit_wakeup.py
