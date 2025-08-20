@@ -5,7 +5,11 @@ import { Button } from "@/components/ui/button";
 // import { ThemeToggle } from '@/components/theme-toggle';
 import { ChevronLeft, ExternalLink, Rocket } from "lucide-react";
 
-export default async function AppView({ params }: { params: { id: string } }) {
+export default async function AppView({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
   const { id: appId } = await params;
   const app = await getAppById(appId);
   if (!app) {
