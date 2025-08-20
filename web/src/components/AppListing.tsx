@@ -108,12 +108,12 @@ export function AppListing({ initialApps }: AppListingProps) {
 
   return (
     <div className="flex flex-col gap-8">
-      <div className="flex flex-col gap-6 rounded-xl bg-card p-6 shadow-sm md:flex-row md:items-center md:justify-between border">
+      <div className="flex flex-col gap-6 rounded-xl bg-card p-6 shadow-xs md:flex-row md:items-center md:justify-between border">
         <div className="flex items-center gap-4">
           <Link href="/" className="flex items-center space-x-2">
             <Rocket className="h-8 w-8 text-primary" />
           </Link>
-          <div className='flex-grow'>
+          <div className='grow'>
              <h1 className="text-2xl font-extrabold tracking-tight text-foreground lg:text-3xl font-headline">
               Streamlit App Hub
             </h1>
@@ -122,7 +122,7 @@ export function AppListing({ initialApps }: AppListingProps) {
             </p>
           </div>
         </div>
-        <div className="flex flex-shrink-0 items-center gap-4">
+        <div className="flex shrink-0 items-center gap-4">
           <div className="relative w-full md:max-w-xs">
             <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
             <Input

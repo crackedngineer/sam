@@ -27,25 +27,26 @@ export default async function AppView({
   return (
     <div className="flex h-screen w-screen flex-col bg-background">
       <header className="flex h-16 shrink-0 items-center justify-between border-b px-4 sm:px-6">
-        <div className="flex items-center gap-4">
+        <div className="flex flex-1 items-center gap-2 sm:gap-4">
           <Button variant="outline" size="icon" asChild>
             <Link href="/">
               <ChevronLeft className="h-5 w-5" />
               <span className="sr-only">Back to home</span>
             </Link>
           </Button>
-          <Link href="/" className="flex items-center gap-2 font-semibold">
+          <Link href="/" className="hidden items-center gap-2 font-semibold sm:flex">
             <Rocket className="h-6 w-6 text-primary" />
             <span className="text-lg font-headline">App Hub</span>
           </Link>
-          <span className="text-lg text-muted-foreground">/</span>
-          <h1 className="text-lg font-semibold">{String(formatApp.title)}</h1>
+          <span className="hidden text-lg text-muted-foreground sm:block">/</span>
+          <h1 className="truncate text-base font-semibold sm:text-lg">{String(formatApp.title)}</h1>
         </div>
-        <div className="flex items-center gap-4">
-          <Button variant="outline" asChild>
+        <div className="flex items-center gap-2 sm:gap-4">
+          <Button variant="outline" size="sm" asChild>
             <a href={appUrl} target="_blank" rel="noopener noreferrer">
               <ExternalLink className="mr-2 h-4 w-4" />
-              Open in New Tab
+              <span className="hidden sm:inline">Open in New Tab</span>
+              <span className="inline sm:hidden">Open</span>
             </a>
           </Button>
           {/* <ThemeToggle /> */}
