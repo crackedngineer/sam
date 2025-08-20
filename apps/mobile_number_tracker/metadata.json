@@ -4,5 +4,6 @@
     "version": "0.0.1",
     "description": "This is app1, a sample application.",
     "author": "crackedngineer",
-    "license": "MIT"
+    "license": "MIT",
+    "tags": ["mobile", "tracking"]
 }

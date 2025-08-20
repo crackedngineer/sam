@@ -6,5 +6,6 @@
     "author": "crackedngineer",
     "license": "MIT",
     "src": "src/app.py",
-    "icon": ":material/account_circle:"
+    "icon": ":material/account_circle:",
+    "tags": ["test", "sample"]
 }
