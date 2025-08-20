@@ -5,7 +5,10 @@
         "version": "1.0.0",
         "description": "This is welcome app, a sample application.",
         "author": "crackedngineer",
-        "license": "MIT"
+        "license": "MIT",
+        "tags": [
+            "app"
+        ]
     },
     {
         "name": "test",
@@ -15,7 +18,11 @@
         "author": "crackedngineer",
         "license": "MIT",
         "src": "src/app.py",
-        "icon": ":material/account_circle:"
+        "icon": ":material/account_circle:",
+        "tags": [
+            "test",
+            "sample"
+        ]
     },
     {
         "name": "mobile_number_tracker",
@@ -23,7 +30,11 @@
         "version": "0.0.1",
         "description": "This is app1, a sample application.",
         "author": "crackedngineer",
-        "license": "MIT"
+        "license": "MIT",
+        "tags": [
+            "mobile",
+            "tracking"
+        ]
     },
     {
         "name": "digipin-pro",
@@ -32,6 +43,9 @@
         "description": "This is app1, a sample application.",
         "author": "crackedngineer",
         "license": "MIT",
-        "icon": ":material/account_circle:"
+        "icon": ":material/account_circle:",
+        "tags": [
+            "digipin"
+        ]
     }
 ]
