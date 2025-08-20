@@ -6,7 +6,8 @@ import { Button } from "@/components/ui/button";
 import { ChevronLeft, ExternalLink, Rocket } from "lucide-react";
 
 export default async function AppView({ params }: { params: { id: string } }) {
-  const app = await getAppById(params.id);
+  const { id: appId } = await params;
+  const app = await getAppById(appId);
   if (!app) {
     notFound();
   }
@@ -17,7 +18,7 @@ export default async function AppView({ params }: { params: { id: string } }) {
     tags: app.tags || [],
     screenshot: app.screenshot || "",
   };
-  const appUrl = `${process.env.NEXT_PUBLIC_STREAMLIT_APPS_BASE_URL}?page=${app?.name}`;
+  const appUrl = `${process.env.NEXT_PUBLIC_STREAMLIT_APPS_BASE_URL}?embed=true&page=${app?.name}`;
 
   return (
     <div className="flex h-screen w-screen flex-col bg-background">
