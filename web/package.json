@@ -8,6 +8,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+	"lint:fix": "eslint . --fix",
+	"format": "prettier --write .",
+	"typecheck": "tsc --noEmit",
     "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
     "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
     "cf-typegen": "wrangler types --env-interface CloudflareEnv ./cloudflare-env.d.ts"
@@ -22,7 +25,8 @@
     "postcss": "^8.5.6",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "tailwind-merge": "^3.3.1"
+    "tailwind-merge": "^3.3.1",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
