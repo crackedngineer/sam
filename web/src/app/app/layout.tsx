@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "App View",
-  description: "Viewing a Streamlit application.",
+  title: "Apptizr",
+  description: "Viewing application.",
 };
 
 export default function AppLayout({ children }: { children: React.ReactNode }) {

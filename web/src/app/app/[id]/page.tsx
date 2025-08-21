@@ -36,7 +36,7 @@ export default async function AppView({
           </Button>
           <Link href="/" className="hidden items-center gap-2 font-semibold sm:flex">
             <Rocket className="h-6 w-6 text-primary" />
-            <span className="text-lg font-headline">App Hub</span>
+            <span className="text-lg font-headline">Apptizr</span>
           </Link>
           <span className="hidden text-lg text-muted-foreground sm:block">/</span>
           <h1 className="truncate text-base font-semibold sm:text-lg">{String(formatApp.title)}</h1>
