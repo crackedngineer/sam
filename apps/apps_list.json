@@ -1,31 +1,7 @@
 [
     {
-        "name": "home",
-        "title": "Home",
-        "version": "1.0.0",
-        "description": "This is welcome app, a sample application.",
-        "author": "crackedngineer",
-        "license": "MIT",
-        "tags": [
-            "app"
-        ]
-    },
-    {
-        "name": "test",
-        "title": "Test App",
-        "version": "1.0.0",
-        "description": "This is app1, a sample application.",
-        "author": "crackedngineer",
-        "license": "MIT",
-        "src": "src/app.py",
-        "icon": ":material/account_circle:",
-        "tags": [
-            "test",
-            "sample"
-        ]
-    },
-    {
         "name": "mobile_number_tracker",
+        "type": "streamlit",
         "title": "Mobile Number Tracker App",
         "version": "0.0.1",
         "description": "This is app1, a sample application.",
@@ -38,6 +14,7 @@
     },
     {
         "name": "digipin-pro",
+        "type": "streamlit",
         "title": "Digipin Pro App",
         "version": "0.0.1",
         "description": "This is app1, a sample application.",
