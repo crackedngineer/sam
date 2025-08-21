@@ -1,5 +1,6 @@
 {
     "name": "digipin-pro",
+    "type": "streamlit",
     "title": "Digipin Pro App",
     "version": "0.0.1",
     "description": "This is app1, a sample application.",

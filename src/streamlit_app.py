@@ -27,6 +27,12 @@ def main():
     
     app_metadata = read_json(app_metadata_path)
 
+    # Check for "streamlit" app type
+    app_type = app_metadata.get(type, None)
+    if not app_type or app_type != "streamlit":
+        st.error("This application is not recognized as a Streamlit app. Please check your configuration or app type.")
+        return
+
     app_src = app_metadata.get("src", "main.py")
     page_path = os.path.join(app_path, app_src)
     if not os.path.isfile(page_path):
