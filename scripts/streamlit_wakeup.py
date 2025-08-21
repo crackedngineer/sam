@@ -57,7 +57,7 @@ if __name__ == "__main__":
 
     # Add the URLs you want to wake up here. Only Streamlit URLs are supported.
     URLS = [
-        'https://7otrdjnlmugvfv5rudnhlf.streamlit.app/',
+        'https://ilovemy.streamlit.app/',
     ]
 
     # Set to True to print the logs
