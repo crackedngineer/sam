@@ -5,8 +5,8 @@ import { cn } from "@/lib/utils";
 // import { ThemeProvider } from '@/components/theme-provider';
 
 export const metadata: Metadata = {
-  title: "Streamlit App Manager",
-  description: "A curated list of Streamlit applications.",
+  title: "Apptizr",
+  description: "Curated list of application developed using Streamlit, Gardio etc...",
 };
 
 export default function RootLayout({

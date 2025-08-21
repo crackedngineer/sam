@@ -115,10 +115,10 @@ export function AppListing({ initialApps }: AppListingProps) {
           </Link>
           <div className='grow'>
              <h1 className="text-2xl font-extrabold tracking-tight text-foreground lg:text-3xl font-headline">
-              Streamlit App Hub
+              Apptizr
             </h1>
             <p className="mt-1 text-base text-muted-foreground">
-              A curated collection of innovative applications.
+              Curated list of application developed using Streamlit, Gardio etc...
             </p>
           </div>
         </div>
