@@ -6,6 +6,7 @@ enableCORS = false
 enableXsrfProtection = true
 maxUploadSize = 200
 runOnSave = true
+folderWatchBlacklist = ["web", "scripts"]
 
 [theme]
 primaryColor = "#4B9CD3"
