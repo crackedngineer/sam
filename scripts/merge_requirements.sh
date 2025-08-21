@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -e
 
-BASE_DIR="$(pwd)"
-FINAL_REQ_FILE="$BASE_DIR/apps/requirements.txt"
+BASE_DIR="$(pwd)/../apps/"
+FINAL_REQ_FILE="$BASE_DIR/requirements.txt"
 TEMP_REQ_FILE="$BASE_DIR/temp_requirements.txt"
 
 # Ensure src directory exists
