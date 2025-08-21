@@ -4,7 +4,7 @@
  */
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
-	"name": "i-love-my-streamlit-app",
+	"name": "apptizr",
 	"main": ".open-next/worker.js",
 	"compatibility_date": "2025-08-16",
 	"compatibility_flags": [
