@@ -1,2 +1,3 @@
-# sam
-Streamlit Application Manager
+# Apptizr
+
+Curated list of application developed using Streamlit, Gardio etc...
