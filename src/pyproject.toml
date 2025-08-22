@@ -1,12 +1,12 @@
 [project]
-name = "i-love-my-streamlit"
+name = "apptizr"
 version = "0.1.0"
 description = ""
 authors = [
     { name = "Subhomoy Roy Choudhury", email = "subhomoyrchoudhury@gmail.com" },
 ]
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.11"
 dependencies = ["streamlit (>=1.48.0,<2.0.0)"]
 
 [tool.poetry]
