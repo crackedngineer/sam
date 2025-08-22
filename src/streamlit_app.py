@@ -28,7 +28,7 @@ def main():
     app_metadata = read_json(app_metadata_path)
 
     # Check for "streamlit" app type
-    app_type = app_metadata.get(type, None)
+    app_type = app_metadata.get("type", None)
     if not app_type or app_type != "streamlit":
         st.error("This application is not recognized as a Streamlit app. Please check your configuration or app type.")
         return
