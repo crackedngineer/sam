@@ -1,0 +1,14 @@
+services:
+  web:
+    image: apptizr-web
+    build:
+      context: web
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/.next
+    env_file:
+      - ./web/.env.local
+    ports:
+      - "3000:3000" 

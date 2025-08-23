@@ -1,12 +1,11 @@
 {
   "name": "Python 3",
   // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-  "image": "mcr.microsoft.com/devcontainers/python:1-3.11-bullseye",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
   "customizations": {
     "codespaces": {
       "openFiles": [
-        "README.md",
-        "src/app/main.py"
+        "README.md"
       ]
     },
     "vscode": {
@@ -17,17 +16,19 @@
       ]
     }
   },
-  "updateContentCommand": "[ -f packages.txt ] && sudo apt update && sudo apt upgrade -y && sudo xargs apt install -y <packages.txt; [ -f requirements.txt ] && pip3 install --user -r requirements.txt; pip3 install --user streamlit; echo '✅ Packages installed and Requirements met'",
-  "postAttachCommand": {
-    "server": "streamlit run src/streamlit_app.py --server.enableCORS false --server.enableXsrfProtection false"
-  },
+  "postAttachCommand": {},
   "portsAttributes": {
-    "8501": {
+    "3000": {
       "label": "Application",
       "onAutoForward": "openPreview"
     }
   },
   "forwardPorts": [
-    8501
-  ]
+    3000
+  ],
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+    "ghcr.io/devcontainers/features/node:1": {},
+    "ghcr.io/devcontainers/features/python:1": {}
+  }
 }
